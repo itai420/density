@@ -3,7 +3,7 @@ dbhandler = {}
 
 const getModel = modelName => require(`../.././handlers/db/models/${modelName}`);
 
-mongoose.connect('mongodb+srv://itai:Ii123456123456@cluster0.qzz3q.mongodb.net/hebrew?retryWrites=true&w=majority', () => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/hebrew', () => {
         console.log('connected to DB!')
     }).then(console.log("nice connection bro"))
     .catch(err => console.log("nope the err is" + err))
