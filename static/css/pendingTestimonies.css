@@ -1,0 +1,286 @@
+html {
+    /* background: linear-gradient(to bottom,rgb(255, 255, 255),rgb(189, 245, 255) ); */
+    overflow: hidden !important;
+    background-color: #f8f8f8;
+}
+
+.space {
+    line-height: 200%;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    overflow-y: auto;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    size: 100%;
+    background-color: transparent;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: assistant, Sans-serif;
+}
+
+
+/* body::-webkit-scrollbar{
+    display: none;
+} */
+
+label {
+    color: rgba(46, 46, 46, 0.55) !important;
+}
+
+md-select .md-select-value.md-select-placeholder {
+    color: rgba(46, 46, 46, 0.55);
+}
+
+.filter {
+    box-shadow: rgba(0, 0, 0, 0.12) 1px 1px 3px, rgba(0, 0, 0, 0.24) 1px 1px 3px;
+    background-color: white;
+    margin: 2% 20% 2% 80%;
+    height: 30px;
+    width: 150px;
+    min-width: 147px;
+    min-height: 30px;
+}
+
+md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]),
+md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]),
+md-tabs.md-default-theme.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]) md-icon,
+md-tabs.md-primary>md-tabs-wrapper>md-tabs-canvas>md-pagination-wrapper>md-tab-item:not([disabled]) md-icon {
+    color: black !important;
+    padding: 13px !important;
+    font-size: 1.6em;
+    font-weight: bolder;
+}
+
+
+/* md-tabs.md-default-theme md-ink-bar,
+md-tabs md-ink-bar {
+    color: white;
+    background: black;
+}
+
+.isHigh {
+    transition-duration: 10000ms;
+    box-shadow: rgb(78, 78, 78) 0px 0px 10px 5px !important;
+} */
+
+
+/* md-tabs.md-default-theme.md-primary>md-tabs-wrapper, md-tabs.md-primary>md-tabs-wrapper {
+    background-color: rgb(36, 0, 196);
+} */
+
+.שבר {
+    border-color: rgba(0, 120, 180, 0.75) !important;
+}
+
+.דלקת {
+    border-color: rgba(189, 16, 0, 0.75) !important;
+}
+
+.קרע {
+    border-color: rgba(44, 177, 0, 0.75) !important;
+}
+
+.שבר>md-ink-bar,
+.שבר>md-tabs md-ink-bar {
+    color: white !important;
+    background-color: rgba(0, 120, 180, 0.75) !important;
+}
+
+.שבר>md-ink-bar,
+.שבר>md-tabs md-ink-bar {
+    color: white !important;
+    background-color: rgba(0, 120, 180, 0.75) !important;
+}
+
+.דלקת>md-ink-bar,
+.דלקת>md-tabs md-ink-bar {
+    color: white !important;
+    background-color: rgba(189, 16, 0, 0.75) !important;
+}
+
+.קרע>md-ink-bar,
+md-tabs md-ink-bar {
+    color: white !important;
+    background-color: rgba(44, 177, 0, 0.75) !important;
+}
+
+
+/* md-tabs.md-default-theme.md-primary>md-tabs-wrapper, md-tabs.md-primary>md-tabs-wrapper {
+    background-color: rgb(63,81,181);
+} */
+
+.testimonyParagraph {
+    font-size: 2em;
+    margin: 0% 1%;
+    text-align: right;
+}
+
+.testimonyBorder {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 3.5px;
+}
+
+.emptyBackground md-tabs-wrapper {
+    background-color: transparent !important;
+}
+
+.cont {
+    border-radius: 20px;
+    /* display: inline-block; */
+    position: relative !important;
+    /* box-shadow:rgba(0,0,0,0.12) 2px 2px 11px, rgba(0,0,0,0.24) 2px 2px 11px; */
+    margin: 5% 5%;
+    /* max-width: 750px;
+    min-width: 750px;
+    max-height: 250px;
+    min-height: 250px; */
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    opacity: 1;
+    font-size: 2em;
+    margin: 10px 15px;
+}
+
+h3 {
+    margin: 10px;
+}
+
+.testi {
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 15%;
+    display: flex;
+    height: 300px;
+    background-color: rgba(121, 255, 255, 0.5);
+    border: 4px solid rgba(52, 128, 128, 0.83);
+    border-radius: 30px;
+}
+
+.picname {
+    display: flex;
+    flex-direction: row;
+}
+
+.smallNav {
+    margin: 5px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.smallNav h2:hover {
+    text-decoration: underline;
+}
+
+.dialog {
+    min-width: 600px;
+    min-height: 700px;
+    height: 60%;
+    width: 35%;
+}
+
+form {
+    height: 80%;
+    padding: 20px 20px !important;
+}
+
+.button {
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #1161ee;
+}
+
+.dialogInput {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.8em;
+}
+
+.dialogLable {
+    color: #000 !important;
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.mdContainer {
+    margin: 0 !important;
+    width: 240px;
+    /* margin: 20px !important; */
+}
+
+.treatmentmdContainer {
+    width: 120px !important;
+    margin: 0 !important;
+}
+
+.testimoiesContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.treatment {
+    display: flex;
+    flex-direction: row;
+}
+
+.treatmentSpan {
+    margin: 10px 10px;
+    /* height: 22px !important; */
+}
+
+.approved {
+    color: rgb(0, 153, 0) !important;
+}
+
+.denied {
+    color: rgb(255, 0, 0) !important;
+}
+
+.yes {
+    margin: 10px;
+    zoom: 2;
+    outline: none;
+    color: rgba(0, 201, 0, 0.045);
+}
+
+.no {
+    margin: 10px;
+    zoom: 2;
+    outline: none;
+    color: rgba(255, 0, 0, 0.045);
+}
+
+.yes:hover {
+    color: rgba(0, 201, 0, 0.671);
+}
+
+.no:hover {
+    color: rgba(255, 0, 0, 0.678);
+}
+
+.yes:checked {
+    color: rgb(0, 201, 0);
+}
+
+.no:checked {
+    color: rgb(255, 0, 0);
+}
+
+.span {
+    margin: 10px;
+    zoom: 2;
+}

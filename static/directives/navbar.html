@@ -1,0 +1,19 @@
+<div dir="ltr" class="navBarBody">
+<div class="navBar">
+
+<div class="flexNav">  
+
+
+<a href="/home">בית</a>
+    <a href="/testimonies">עדויות</a>
+    <a ng-if="!IsOut" href="/myTestimonies">העדויות שלי</a>
+    <a ng-if="manager" href="/pendingTestimonies">עדויות הממתינות לאישור</a>
+
+    <a ng-if="IsOut" class="toLogIn" href="/login">להתחבר</a>
+    <a ng-if="!IsOut" class="toLogIn" href="/logout">להתנתק</a>
+    <img height="100%" src="https://density-calcium.co.il/wp-content/uploads/2020/11/density_logo.svg">
+
+</div>
+
+</div>
+</div>

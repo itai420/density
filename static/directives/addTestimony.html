@@ -1,0 +1,84 @@
+<!-- <div class="md-dialog-container" id="myDialog"> -->
+<md-dialog dir="rtl" class="dialog" layout-padding="">
+    <form ng-cloak autocomplete="off" action="/testimonies/addTestimonies" method="POST">
+        <label class="dialogLable">הוסף עדות</label>
+        <div layout-gt-sm="row" class="dialogInput">
+            <md-input-container class="mdContainer">
+                <label>שם</label>
+                <input ng-model='name' name="name" type="text" required>
+            </md-input-container>
+
+            <md-input-container class="mdContainer">
+                <label>גיל</label>
+                <input ng-model='age' name="age" type="number" required>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="dialogInput">
+            <md-input-container class="mdContainer">
+                <label>סוג ספורט</label>
+                <input ng-model='sports' name="sports" type="text" required>
+            </md-input-container>
+
+            <md-input-container class="mdContainer">
+                <label>רמת פעילות</label>
+                <md-select ng-model="activityFilter" name="levelOfActivity" required>
+                    <md-option ng-value="levelOfActivity" ng-repeat="levelOfActivity in activityLevel" required>
+                        {{levelOfActivity}} </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+
+        <div layout-gt-sm="row" class="dialogInput">
+            <md-input-container class="mdContainer">
+                <label>סוג פציעה</label>
+                <md-select ng-model="filter" name="typeOfInjury" required>
+                    <md-option ng-click="updateLevel()" ng-value="typeOfInjury" ng-repeat="typeOfInjury in injuries" required>
+                        {{typeOfInjury}} </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="mdContainer">
+                <label>דרגת פציעה</label>
+                <md-select ng-disabled="openLevel" ng-model="injuryfilter" name="LevelOfInjury" required>
+                    <md-option ng-value="LevelOfInjury" ng-repeat="LevelOfInjury in LevelOfinjuri" required>
+                        {{LevelOfInjury}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="dialogInput">
+            <div class="treatment">
+                <span class="treatmentSpan">לקחתי</span>
+                <md-input-container class="treatmentmdContainer">
+                    <label>כמות שקיות</label>
+                    <input ng-model='bagsQuantity' name="bagsQuantity" type="number" required>
+                </md-input-container>
+                <span class="treatmentSpan">שקיות אבקה ו</span>
+                <md-input-container class="treatmentmdContainer">
+                    <label>כמות טבליות</label>
+                    <input ng-model='pillsQuantity' name="pillsQuantity" type="number" required>
+                </md-input-container>
+                <span class="treatmentSpan">טבליות ביום</span>
+            </div>
+        </div>
+        <div layout-gt-sm="row" class="dialogInput">
+            <div class="treatment">
+                <span class="treatmentSpan">למשך</span>
+                <md-input-container class="treatmentmdContainer">
+                    <label>כמה</label>
+                    <input ng-model='days' name="days" type="number" required>
+                </md-input-container>
+                <span class="treatmentSpan">ימים</span>
+            </div>
+        </div>
+        <md-input-container>
+            <label>איך השפיע עליי</label>
+            <input ng-model='Quote' name="Quote" type="text" required>
+        </md-input-container>
+        <div>
+            <input type="submit" class="button" value="אישור">
+        </div>
+
+    </form>
+</md-dialog>
+<!-- </div> -->

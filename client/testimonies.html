@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Testimonies">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/685fee1bbe.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="/vendors/angular.min.js"></script> -->
+    <!-- <script src="/vendors/angular-material/angular-material.min.js"></script>
+    <script src="/vendors/angular-aria/angular-aria.min.js"></script>
+    <script src="/vendors/angular-animate/angular-animate.min.js"></script> -->
+    <!-- <script src="\apps\navbar\navbar.js"></script> -->
+    <!-- <script src="/vendors/angular-messages/angular-messages.min.js"></script> -->
+    <!-- <script src="\apps\testimonies\testimonies.js"></script>
+    <script src="\apps\testimonies\testimoniesModule.js"></script>
+    <script src="\apps\navbar\navbarModule.js"></script> -->
+    <script src="/public/testimonies.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="/vendors/angular-material/angular-material.min.css"> -->
+    <!-- <link rel="stylesheet" href="\styleTestimonies.css"> -->
+    <!-- <link rel="stylesheet" href="\navBars.css"> -->
+    <title>Document</title>
+</head>
+
+<body dir="rtl" ng-controller="TestimoniesController">
+    <navBar></navBar>
+    <h1>מה יש להם להגיד</h1>
+    <div class="allTriangle">
+        <svg height="230" width="440">
+
+			<polygon ng-click="choose('דלקת')" ng-class="{'topChozen':chozen=='דלקת' }" class="topPoly"
+				points="220,3 114,109 326,109" />
+
+			<polygon ng-click="choose('שבר')" ng-class="{'leftChozen':chozen=='שבר'}" class="leftPoly"
+				points="110,113 4,219 216,219" />
+
+			<polygon ng-click="choose('קרע')" ng-class="{'rightChozen':chozen=='קרע'}" class="rightPoly"
+				points="330,113 224,219 436,219" />
+
+			<polygon ng-click="choose('כל הפציעות')" ng-class="{'midChozen':chozen=='כל הפציעות' }" class="midPoly"
+				points="110,110.5 220,220.5 330,110.5" />
+
+			<text ng-click="choose('דלקת')" ng-class="{'white':chozen=='דלקת' }" x="242" y="73">דלקת</text>
+			<text ng-click="choose('שבר')" ng-class="{'white':chozen=='שבר'}" x="129" y="181">שבר</text>
+			<text ng-click="choose('קרע')" ng-class="{'white':chozen=='קרע'}" x="345" y="181">קרע</text>
+			<text ng-click="choose('כל הפציעות')" x="272" y="145">כל הפציעות</text>
+
+
+		</svg>
+
+        <!-- <div class="topTriangle"></div>
+        <span class="topSpan">דלקת</span>
+
+        <div class="rightMiddleTriangle"></div>
+        <span class="rightSpan">שבר</span>
+
+        <div class="leftMiddleTriangle"></div>
+        <span class="leftSpan">קרע</span> -->
+    </div>
+
+    <div style="position: absolute;">
+        <md-toast>
+
+        </md-toast>
+    </div>
+    <i title="הוסף עדות" class="fas addButton fa-plus-circle" ng-show="!IsOut" ng-click="showDialog($event)"></i>
+    <i title="הוסף עדות" class="fas addButton fa-plus-circle" ng-show="IsOut" ng-click="openToast()"></i>
+
+    <!-- <md-button ng-show="!IsOut" class="md-primary md-raised density" ng-click="showDialog($event)">add testimony</md-button>
+    <md-button ng-show="IsOut" ng-click="openToast()" class="md-primary md-raised density" > add testimony</md-button> -->
+
+    <!-- <md-select placeholder="filter by injury" class="md-no-underline filter" ng-model="filter">
+        <md-option ng-click="fu()" ng-model="filter" ng-value="opt" ng-repeat="opt in options">{{opt}} </md-option>
+    </md-select> -->
+
+    <h2 ng-show="Testimonies.length==0">אין עדויות </h2>
+    <div class="testimonyConstainer" layout-align="center" layout="row" layout-wrap="">
+        <testimony flex="90" ng-show="(chozen===testimony.Injury.typeOfInjury||chozen==='כל הפציעות')" flex-gt-md="45" ng-repeat="testimony in Testimonies" id='id' testimony="testimony"></testimony>
+    </div>
+</body>
+
+</html>

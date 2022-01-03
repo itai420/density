@@ -1,0 +1,33 @@
+<div dir="rtl" id={{testimony._id}} ng-cloak class="cont">
+    <md-content class="testimonyBorder" ng-class="[testimony.Injury.typeOfInjury,{'isHigh':isChozen,'borderChozen':borderChozen}]">
+        <md-tabs class="{{testimony.Injury.typeOfInjury}} emptyBackground md-primary" md-center-tabs>
+            <md-tab label="הפציעה">
+                <md-content class="md-padding">
+                    <p class="space testimonyParagraph">סוג פציעה: {{testimony.Injury.typeOfInjury}} <br> דרגת פציעה: {{testimony.Injury.LevelOfInjury}}
+                    </p>
+                </md-content>
+            </md-tab>
+            <md-tab label="הטיפול">
+                <md-content class="md-padding">
+                    <p ng-if="(took=='both')" class="space testimonyParagraph">לקח {{testimony.Treatment.bagsQuantity}} שקיות אבקה ו {{testimony.Treatment.pillsQuantity}} טבליות ביום </p>
+                    <p ng-if="(took=='bags')" class="space testimonyParagraph">לקח {{testimony.Treatment.bagsQuantity}} שקיות אבקה ביום </p>
+                    <p ng-if="(took=='pills')" class="space testimonyParagraph">לקח {{testimony.Treatment.pillsQuantity}} טבליות ביום </p>
+                    <br>
+                    <p class="space testimonyParagraph">למשך {{testimony.Treatment.time}}</p>
+                </md-content>
+            </md-tab>
+            <md-tab label="ציטוט">
+                <md-content class="md-padding">
+                    <h2 class="md-display-1">"{{testimony.Quote}}"</h2>
+                </md-content>
+            </md-tab>
+            <md-tab label="פרופיל">
+                <md-content class="md-padding">
+                    <p class="testimonyParagraph">שם: {{testimony.Profile.name}} <br> גיל: {{testimony.Profile.age}}<br> ספורט: {{testimony.Profile.sports}}<br> רמת פעילות: {{testimony.Profile.levelOfActivity}}<br>
+                    </p>
+                </md-content>
+            </md-tab>
+
+        </md-tabs>
+    </md-content>
+</div>

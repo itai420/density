@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Home">
+
+<head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/public/home.js"></script>
+    <title>Document</title>
+</head>
+
+<body dir="rtl" ng-controller="Home">
+    <navbar></navbar>
+    <h1>גשם של עדויות</h1>
+    <div class="drops">
+        <drop ng-repeat="content in arr" class="dropContainer" content='content'></drop>
+    </div>
+</body>
+
+</html>

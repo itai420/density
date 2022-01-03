@@ -1,0 +1,33 @@
+<div dir="rtl" id={{testimony._id}} ng-cloak class="cont" ng-class="{'isHigh':isChozen}">
+    <span ng-click="Approving(testimony._id)" ng-class="{'approved':status=='מאושר'}" class="yes fa fa-check"></span>
+    <span ng-click="Denied(testimony._id)" ng-class="{'denied':status=='נדחה'}" class=" no fa fa-times"></span>
+
+    <md-content class="testimonyBorder" ng-class="testimony.Injury.typeOfInjury">
+        <md-tabs class="{{testimony.Injury.typeOfInjury}} emptyBackground md-primary" md-center-tabs>
+            <md-tab label="הפציעה">
+                <md-content class="md-padding">
+                    <p class="space testimonyParagraph">סוג פציעה: {{testimony.Injury.typeOfInjury}} <br> דרגת פציעה: {{testimony.Injury.LevelOfInjury}}
+                    </p>
+                </md-content>
+            </md-tab>
+            <md-tab label="הטיפול">
+                <md-content class="md-padding">
+                    <p class="space testimonyParagraph">לקח {{testimony.Treatment.quantity}} מנות ליום <br> למשך {{testimony.Treatment.time}}
+                    </p>
+                </md-content>
+            </md-tab>
+            <md-tab label="ציטוט">
+                <md-content class="md-padding">
+                    <h2 class="md-display-1">"{{testimony.Quote}}"</h2>
+                </md-content>
+            </md-tab>
+            <md-tab label="פרופיל">
+                <md-content class="md-padding">
+                    <p class="testimonyParagraph">שם: {{testimony.Profile.name}} <br> גיל: {{testimony.Profile.age}}<br> ספורט: {{testimony.Profile.sports}}<br> רמת פעילות: {{testimony.Profile.levelOfActivity}}<br>
+                    </p>
+                </md-content>
+            </md-tab>
+
+        </md-tabs>
+    </md-content>
+</div>

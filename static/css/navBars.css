@@ -1,0 +1,69 @@
+
+.navBar a{
+    font-family: assistant,Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 33px;
+    border-width: 0px;
+    border-style: solid;
+    text-decoration: none;
+    padding: 16px 30px;
+    color: black;
+}
+.navBarBody{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 76px;
+    background-color: #f8f8f8;
+
+
+}
+.flexNav{
+    width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+.navBar{
+    border-radius: 38px 38px 38px 38px;
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    border-bottom-left-radius: 38px;
+    width: 95%;
+
+
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 21%);
+    height: 100%;
+    z-index: 1;
+    position: sticky;
+    list-style-type: none;
+    margin: 0;
+    background-color: white;
+    display:flex;
+}
+
+.toLogIn{
+    justify-self: flex-start;
+    margin-right: auto;
+    margin-left: 1%;
+}
+
+.navBar a::after{
+    transition-duration:0.5s;
+    content: '';
+    background-color:transparent;
+    display: block;
+    width:100%;
+    height:2px;
+}
+.navBar a:hover::after{
+    content: '';
+    background-color:#1e294e;
+    display: block;
+    width: 100%;
+    height:2px;
+}

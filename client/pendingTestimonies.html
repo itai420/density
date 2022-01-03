@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pendingTestimonies">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/685fee1bbe.js" crossorigin="anonymous"></script>
+    <script src="/public/pendingTestimonies.js"></script>
+    <title>pending</title>
+</head>
+
+<body dir="rtl" ng-controller="pendingTestimoniesController">
+    <navBar></navBar>
+    <md-select class="md-no-underline filter" ng-model="filter">
+        <md-option ng-click="fu()" ng-value="filter" ng-repeat="filter in options">{{filter}} </md-option>
+    </md-select>
+    <div class="testimonyConstainer" layout-align="center" layout="row" layout-wrap="">
+        <testimony ng-show="filter===testimony.Approved||filter==='סנן על פי סטטוס'" flex="90" flex-gt-md="45" ng-repeat="testimony in myTestimonies" id='id' testimony="testimony"></testimony>
+    </div>
+
+</body>
+
+</html>

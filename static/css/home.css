@@ -1,0 +1,183 @@
+body{
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f8f8;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: assistant,Sans-serif;
+}
+
+h1{
+    font-size: 5em;
+}
+h2{
+    font-size: 3em;
+}
+
+
+
+.שבר{
+    border-color: rgb(0, 113, 170) !important;
+}
+.דלקת{
+    border-color: rgba(189, 16, 0, 0.75) !important;
+}
+.קרע{
+    border-color: rgb(37, 146, 0) !important;
+}
+
+
+
+
+
+
+.drops{
+    white-space: nowrap;
+    /* overflow: hidden; */
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    /* an
+    pimation: rain 10s cubic-bezier(.17,.67,.43,.99) infinite; */
+
+}
+
+@keyframes rain{
+    0%{
+        opacity: 1;
+        transform: translate(0px,-350%) rotateZ(0deg);
+        border-radius: 50% 50% 50% 50%;
+    }
+    15%{
+        opacity: 1;
+        transform: translate(0px,-190%) rotateZ(0deg);
+        border-radius: 50% 50% 50% 50%;
+
+    }
+
+    100%{opacity: 1; transform: translate(0px,450%) rotateZ(0deg);}
+
+}
+@keyframes raindrop{
+    0%{
+        opacity: 0;
+        border-radius: 50% 50% 50% 50%;
+        transform: scaleX(0.01) scaleY(0.01) 
+    }
+    12%{
+        opacity: 1;
+        height: 140px;
+        border-radius: 50% 50% 50% 50%;
+        transform: scaleX(0.95) scaleY(1.1) rotate(45deg); 
+
+    }
+    16%{
+        border-radius: 0% 50% 50% 50%;
+
+    }
+    95%{opacity: 1;          
+    }
+    100%{opacity: 0;         
+}
+
+}
+.dropContainer{
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    margin: 1%;
+    display: inline-flex;
+    transform: rotate(45deg);
+    align-items: center;
+    justify-content: center;
+    animation: rain 4s linear infinite backwards;
+
+
+}
+.dropContent{
+    cursor: pointer;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 1;
+}
+.drop{
+    cursor: pointer;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 5px; */
+    position: absolute;
+    transform: rotate(45deg); 
+    border-radius: 0 50% 50% 50%;
+    /* background: linear-gradient(to right,rgb(255, 255, 255),rgba(87, 195, 231, 0.699) ); */
+    background: linear-gradient(to right,rgb(255, 255, 255),rgb(199, 241, 255) );
+    /* background-color: rgb(227, 248, 255); */
+    border: cornflowerblue solid 2.5px;
+    width: 140px;
+    height: 140px;
+    animation: raindrop 4s linear infinite both;
+
+}
+
+
+.dropContainer:nth-child(1){
+    left: 30px;
+    animation-delay: 3.5s !important;}
+.dropContainer:nth-child(2){
+    left: 200px;
+    animation-delay: 1s !important;}
+.dropContainer:nth-child(3){
+    left: 370px;
+    animation-delay: 1.8s !important;}
+.dropContainer:nth-child(4){
+    left: 540px;
+    animation-delay: 2s !important;}
+.dropContainer:nth-child(5){
+    left: 710px;
+    animation-delay: 0s !important;}
+.dropContainer:nth-child(6){
+    left: 880px;
+    animation-delay: 0.5s !important;}
+.dropContainer:nth-child(7){
+    left: 1050px;
+    animation-delay: 2.5s !important;}
+.dropContainer:nth-child(8){
+    left: 1220px;
+    animation-delay: 2.2s !important;}
+.dropContainer:nth-child(9){
+    left: 1390px;
+    animation-delay: 1.5s !important;}
+.dropContainer:nth-child(10){
+    left: 1560px;
+    animation-delay: 0.2s !important;}
+
+
+
+.drop:nth-child(n){animation-delay: inherit !important;}
+
+
+
+.dropContainer:hover{
+    animation-play-state: paused;
+
+}
+.dropContainer:hover .drop{
+    zoom: 2;
+    border: solid 1px;
+    animation-play-state: paused;
+}
+/* .dropContainer:hover{
+    animation-play-state: paused;
+} */
+
+.dropContainer:hover .dropContent{
+    max-width: 200px !important;
+    width: 190px;
+
+    white-space: pre-wrap;
+    overflow: visible;
+    text-overflow: initial;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myTestimonies">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/public/myTestimonies.js"></script>
+    <title>Document</title>
+</head>
+
+<body dir="rtl" ng-controller="myTestimoniesController">
+    <navBar></navBar>
+    <md-select placeholder="filter by injury" class="md-no-underline filter" ng-model="filter">
+        <md-option ng-click="fu()" ng-model="filter" ng-value="opt" ng-repeat="opt in options">{{opt}} </md-option>
+    </md-select>
+    <h2 ng-show="myTestimonies.length==0">לא העלת עדויות </h2>
+    <div class="testimonyConstainer" layout-align="center" layout="row" layout-wrap="">
+        <testimony ng-repeat="testimony in myTestimonies" flex="90" flex-gt-md="45" id='id' ng-show="filter===testimony.Injury.typeOfInjury||filter==='אין סינון'" testimony="testimony">
+        </testimony>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="authentication">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/public/authentication.js"></script>
+	<title>Log In</title>
+</head>
+
+<body ng-controller="authenticationController">
+
+	<navbar></navbar>
+
+	<div dir="rtl" class="formDiv">
+		<form autocomplete="off" class="formSignUp" id="form" ng-submit="checkIfNamEmailNew(name,password,Email)">
+			<h2 class="formHead">הירשם לאתר</h2>
+			<div class="inputsContainer">
+				<input class="nameANDpass" type="text" placeholder="שם" ng-model="name" name="Name">
+				<input class="nameANDpass" type="{{passwordType}}" ng-model="password" placeholder="סיסמא" name="Password">
+				<input class="nameANDpass" type="email" placeholder="מייל" ng-model="Email" name="Email">
+			</div>
+			<div class="check" ng-class="checkBoxColor">
+				<input ng-click="showPassword()" type="checkbox" ng-model="checkbox" id="checkbox">
+				<label for="checkbox">הראה סיסמא </label>
+			</div>
+			<button class="signIn" type="submit">הירשם</button>
+			<a href="/login" class="moveTo black">יש חשבון? התחבר</a>
+		</form>
+	</div>
+
+
+
+
+</body>
+
+</html>
