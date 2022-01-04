@@ -31,7 +31,10 @@ Testimonies.directive('testimony', () => {
         $scope.took = $scope.pillsOrBags()
         $scope.isChozen = $scope.testimony._id === $scope.id;
         $scope.borderChozen = $scope.testimony._id === $scope.id;
-        $timeout(() => $scope.borderChozen = false, 5000)
+        $timeout(() => {
+            $scope.borderChozen = false;
+            $scope.isChozen = false;
+        }, 5000)
     }
     return directive
 })
