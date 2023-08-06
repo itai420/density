@@ -20,7 +20,7 @@ const flash = require('express-flash')
 initializePassport(
     passport,
     name => AuthHandler.findUserBy({ name: name }),
-    id => AuthHandler.findDoucumentById(id)
+    id => AuthHandler.findDocumentById(id)
 )
 const PORT = process.env.PORT || 8080;
 

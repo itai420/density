@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/hebrew', 
     }).then(console.log("nice connection bro"))
     .catch(err => console.log("nope the err is" + err))
 
-dbhandler.getAllDoucuments = (modelName) => {
+dbhandler.getAllDocuments = (modelName) => {
     const Model = getModel(modelName)
     return Model.find()
 }
@@ -23,7 +23,7 @@ dbhandler.findQuotes = (modelName, filter) => {
     return Model.find(filter, "Quote Injury")
 }
 
-dbhandler.addDoucument = (modelName, document) => {
+dbhandler.addDocument = (modelName, document) => {
     const Model = getModel(modelName)
     const doc = new Model(document)
     doc.save().then(data => console.log('saved'))
@@ -31,19 +31,19 @@ dbhandler.addDoucument = (modelName, document) => {
     return true
 }
 
-dbhandler.findDoucument = (modelName, filter) => {
+dbhandler.findDocument = (modelName, filter) => {
     const Model = getModel(modelName)
     return Model.findOne(filter)
 
 }
 
-dbhandler.findDoucuments = (modelName, filter) => {
+dbhandler.findDocuments = (modelName, filter) => {
     const Model = getModel(modelName)
     return Model.find(filter)
 }
 
 
-dbhandler.findDoucumentById = (modelName, id) => {
+dbhandler.findDocumentById = (modelName, id) => {
     const Model = getModel(modelName)
     return Model.findById(id)
 

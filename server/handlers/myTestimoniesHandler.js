@@ -1,7 +1,7 @@
 const dbhandler = require('./db/dbHandler')
 myTestimoniesHandler = {}
 
-myTestimoniesHandler.getMyTestimonies = (mail) => dbhandler.findDoucuments('testimonies',mail)
+myTestimoniesHandler.getMyTestimonies = (mail) => dbhandler.findDocuments('testimonies',mail)
 
 
 
